@@ -1,0 +1,42 @@
+[
+  {
+    "question": "Qual é o nome do personagem principal em The Legend of Zelda?",
+    "option1": "Link",
+    "option2": "Zelda",
+    "option3": "Ganondorf",
+    "option4": "Epona",
+    "answer": 1
+  },
+  {
+    "question": "Qual é o nome do encanador que é o personagem principal em Super Mario Bros?",
+    "option1": "Luigi",
+    "option2": "Wario",
+    "option3": "Mario",
+    "option4": "Yoshi",
+    "answer": 3
+  },
+  {
+    "question": "Em que ano foi lançado o jogo World of Warcraft?",
+    "option1": "2004",
+    "option2": "2006",
+    "option3": "2008",
+    "option4": "2010",
+    "answer": 1
+  },
+  {
+    "question": "Qual é o nome da arma principal em Gears of War?",
+    "option1": "Lancer",
+    "option2": "Hammerburst",
+    "option3": "Gnasher",
+    "option4": "Longshot",
+    "answer": 1
+  },
+  {
+    "question": "Qual é o nome do jogo em que o jogador controla um assassino que luta contra a Ordem dos Templários?",
+    "option1": "Assassin's Creed",
+    "option2": "Hitman",
+    "option3": "Splinter Cell",
+    "option4": "Metal Gear Solid",
+    "answer": 1
+  }
+]
