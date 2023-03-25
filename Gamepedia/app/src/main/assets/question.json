@@ -25,11 +25,11 @@
   },
   {
     "question": "Qual é o nome da arma principal em Gears of War?",
-    "option1": "Lancer",
+    "option1":"Longshot",
     "option2": "Hammerburst",
     "option3": "Gnasher",
-    "option4": "Longshot",
-    "answer": 1
+    "option4": "Lancer",
+    "answer": 4
   },
   {
     "question": "Qual é o nome do jogo em que o jogador controla um assassino que luta contra a Ordem dos Templários?",
@@ -37,6 +37,6 @@
     "option2": "Hitman",
     "option3": "Splinter Cell",
     "option4": "Metal Gear Solid",
-    "answer": 1
+    "answer": 2
   }
 ]
