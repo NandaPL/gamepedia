@@ -1,7 +1,7 @@
 package com.example.gamepedia
 
+import android.content.Intent
 import android.graphics.Color
-import android.graphics.Typeface
 import android.os.Bundle
 import android.view.View
 import android.widget.TextView
@@ -39,7 +39,6 @@ class GameActivity : AppCompatActivity(), View.OnClickListener {
 
         mListOfQuestions = ReadJson.getListOfQuestions(jsonArray)
 
-        // Exiba as informações do objeto na posição atual
         displayQuestion(mListOfQuestions!![mOptionSelected])
 
         binding.tvQuestion.setOnClickListener(this)
@@ -53,25 +52,19 @@ class GameActivity : AppCompatActivity(), View.OnClickListener {
     override fun onClick(v: View) {
         when(v.id){
             R.id.tv_option_1 -> {
-                mOptionSelected = 1
-                verifyAnswer(mOptionSelected, mListOfQuestions!![mCurrentPosition])
+                verifyAnswer(1, mListOfQuestions!![mCurrentPosition])
             }
             R.id.tv_option_2 -> {
-                mOptionSelected = 2
-                verifyAnswer(mOptionSelected, mListOfQuestions!![mCurrentPosition])
+                verifyAnswer(2, mListOfQuestions!![mCurrentPosition])
             }
             R.id.tv_option_3 -> {
-                mOptionSelected = 3
-                verifyAnswer(mOptionSelected, mListOfQuestions!![mCurrentPosition])
+                verifyAnswer(3, mListOfQuestions!![mCurrentPosition])
             }
             R.id.tv_option_4 -> {
-                mOptionSelected = 4
-                verifyAnswer(mOptionSelected, mListOfQuestions!![mCurrentPosition])
+                verifyAnswer(4, mListOfQuestions!![mCurrentPosition])
             }
         }
     }
-
-    // Crie um método para atualizar os TextViews com as informações do objeto
     private fun displayQuestion(question: JSONObject) {
         binding.tvQuestion.text = question.getString("question")
         binding.tvOption1.text = question.getString("option1")
@@ -81,17 +74,24 @@ class GameActivity : AppCompatActivity(), View.OnClickListener {
     }
 
     private fun verifyAnswer(optionSelected: Int, question: JSONObject){
-        mCurrentPosition++
         val answer = question.getInt("answer")
 
-        if (optionSelected != answer){
+        if(optionSelected == answer){
+            mPoints += 10
+            showAnswer(answer, R.drawable.correct_answer)
+        }
+        else{
             showAnswer(optionSelected, R.drawable.incorrect_answer)
+        }
+
+        if (mCurrentPosition < mListOfQuestions!!.size - 1){
+            mCurrentPosition++
             displayQuestion(mListOfQuestions!![mCurrentPosition])
         }
         else{
-            mPoints += 10
-            showAnswer(answer, R.drawable.correct_answer)
-            displayQuestion(mListOfQuestions!![mCurrentPosition])
+            val intent = Intent(this@GameActivity, ResultActivity::class.java)
+                .putExtra("PONTUATION", mPoints)
+            startActivity(intent)
         }
     }
 
@@ -104,8 +104,7 @@ class GameActivity : AppCompatActivity(), View.OnClickListener {
         options.add(3, binding.tvOption4)
 
         for (option in options) {
-            option.setTextColor(Color.parseColor("#7A8089"))
-            option.typeface = Typeface.DEFAULT
+            option.setTextColor(Color.DKGRAY)
             option.background = ContextCompat.getDrawable(
                 this@GameActivity,
                 R.color.white
