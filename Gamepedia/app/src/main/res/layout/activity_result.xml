@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:gravity="center"
+    android:background="@drawable/ic_background"
     android:orientation="vertical"
     tools:context=".ResultActivity">
 
@@ -12,16 +13,19 @@
         android:id="@+id/tv_message"
         android:textAlignment="center"
         android:textSize="30sp"
+        android:textColor="@color/white"
+        android:textStyle="bold"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/message" />
+        android:text="@string/win_message" />
 
     <TextView
         android:id="@+id/tv_correct_questions"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textAlignment="center"
-        android:textSize="26sp"
+        android:textSize="30sp"
+        android:textColor="@color/white"
         android:layout_margin="16dp"
         android:text="@string/number_questions"/>
 
@@ -29,7 +33,18 @@
         android:id="@+id/tv_points"
         android:textAlignment="center"
         android:textSize="30sp"
+        android:textColor="@color/white"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/points" />
+
+    <Button
+        android:id="@+id/button_back_menu"
+        android:layout_width="256dp"
+        android:layout_height="60dp"
+        android:layout_margin="24dp"
+        android:backgroundTint="@color/teal_700"
+        android:textSize="24sp"
+        android:textColor="@color/white"
+        android:text="@string/finish" />
 </LinearLayout>
