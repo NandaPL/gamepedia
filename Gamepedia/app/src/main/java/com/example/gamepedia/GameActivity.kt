@@ -90,7 +90,7 @@ class GameActivity : AppCompatActivity(), View.OnClickListener {
             Handler().postDelayed({
                 defaultOptionsView()
                 displayQuestion(mListOfQuestions!![mCurrentPosition])
-            }, 2000) // aguarda 1 segundo (1000 milissegundos) antes de exibir a próxima questão
+            }, 1000) // aguarda 1 segundo (1000 milissegundos) antes de exibir a próxima questão
 
         }
         else{

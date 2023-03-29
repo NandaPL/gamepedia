@@ -24,7 +24,9 @@ class ResultActivity : AppCompatActivity() {
         binding.tvCorrectQuestions.text = "$correctQuestions/$numberQuestions"
         binding.tvPoints.text = "$points pontos"
 
-        if(points >= 30){
+        val mediumCorrectQuestions = numberQuestions / 2
+
+        if(numberQuestions >= mediumCorrectQuestions){
             binding.tvMessage.text = getString(R.string.win_message)
         }
         else {

@@ -37,6 +37,46 @@
     "option2": "Hitman",
     "option3": "Splinter Cell",
     "option4": "Metal Gear Solid",
+    "answer": 1
+  },
+  {
+    "question": "Qual é o personagem principal da franquia de jogos The Witcher?",
+    "option1": "Yennifer",
+    "option2": "Geralt",
+    "option3": "Dante",
+    "option4": "Dandelion",
+    "answer": 2
+  },
+  {
+    "question": "Qual desses jogos é um exemplo de um jogo de plataforma clássico?",
+    "option1": "The Elder Scrolls V: Skyrim",
+    "option2": "Grand Theft Auto V",
+    "option3": "Super Mario Bros.",
+    "option4": "Call of Duty: Modern Warfare",
+    "answer": 3
+  },
+  {
+    "question": "Em que jogo você joga como um personagem chamado Nathan Drake que explora tumbas antigas e ruínas em busca de tesouros?",
+    "option1": "The Last Of Us",
+    "option2": "Minecraft",
+    "option3": "PUBG",
+    "option4": "Uncharted",
+    "answer": 4
+  },
+  {
+    "question": "Em que ano foi lançado o primeiro Final Fantasy",
+    "option1": "1988",
+    "option2": "1987",
+    "option3": "1990",
+    "option4": "1960",
+    "answer": 2
+  },
+  {
+    "question": "Qual desses jogos foi a maior inspiração do jogo Stardew Valley?",
+    "option1": "Castlevania",
+    "option2": "God Of War",
+    "option3": "Hasvest Moon",
+    "option4": "The Legend Of Zelda",
     "answer": 2
   }
 ]
